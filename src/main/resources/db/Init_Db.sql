@@ -1,0 +1,1 @@
+INSERT INTO elevator (last_visit_floor, state) VALUES (1, 'DOWN');
