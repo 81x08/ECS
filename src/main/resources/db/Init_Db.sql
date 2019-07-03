@@ -1,1 +1,1 @@
-INSERT INTO elevator (last_visit_floor, state) VALUES (1, 'DOWN');
+INSERT INTO elevator (time_last_floor, last_visit_floor, state) VALUES (current_timestamp, 1, 'DOWN');

@@ -5,17 +5,17 @@ public class ElevatorConfig {
     /**
      * Время проезда между двумя этажами
      */
-    private static final int TIME_SPEED_FLOOR = 10;
+    public static final int TIME_SPEED_FLOOR = 10;
 
     /**
      * Время разгона лифта
      */
-    private static final int SPEED_RUN = 2;
+    public static final int SPEED_RUN = 2;
 
     /**
      * Время торможения лифта
      */
-    private static final int SPEED_STOP = 2;
+    public static final int SPEED_STOP = 2;
 
     /**
      * Считаем количество времени, которое потребуется лифту, чтобы проехать
@@ -26,6 +26,14 @@ public class ElevatorConfig {
      */
     public static long getTimeBetweenFloors(int floorA, int floorB) {
         return (Math.abs(floorA - floorB) * TIME_SPEED_FLOOR + SPEED_RUN + SPEED_STOP) * 1000;
+    }
+
+    /**
+     * Общее время, которое должен проехать лифт, что попасть с А этажа на Б
+     * @return Время
+     */
+    public static long getTimes() {
+        return (TIME_SPEED_FLOOR + SPEED_RUN + SPEED_STOP) * 1000;
     }
 
 }

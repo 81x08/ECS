@@ -8,9 +8,6 @@ import ru.ras.ecs.repository.ElevatorRepository;
 public class ElevatorService {
 
     @Autowired
-    private ElevatorRepository elevatorRepository;
-
-    @Autowired
     private ElevatorWorkingComponent elevatorWorkingComponent;
 
     public ElevatorService() {
@@ -18,11 +15,11 @@ public class ElevatorService {
     }
 
     public String call(int goToFloor) {
-        return elevatorWorkingComponent.addFloor(goToFloor);
+        return elevatorWorkingComponent.call(goToFloor);
     }
 
     public String get() {
-        return elevatorWorkingComponent.stateElevator();
+        return elevatorWorkingComponent.get();
     }
 
 }
